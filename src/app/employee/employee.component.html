@@ -1,0 +1,41 @@
+<!--This was used for single employee record 
+  <table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Salary </th>
+  </tr>
+
+  <tr>
+    <td>{{employee.id}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.sal}}</td>
+  </tr>
+
+</table> -->
+
+<table border="1" class="data">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Salary </th>
+  </tr>
+
+  <tr class="data clickable" (click)="onSelect(employee)" *ngFor="let employee of employees">
+    <td>{{employee.id}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.salary}}</td>
+  </tr>
+
+</table>
+
+<!--Here ng-if is used to check if selectedEmployee is set or not-->
+<div *ngIf="selectedEmployee">
+  Selected employee is: {{selectedEmployee.name}}
+  <input type="button" (click)="onClear()" value="Clear selection">
+</div>
+
+<div class="operations">
+  <button type="button" (click)="sortBySalary()">Sort by Salary</button>
+  <button type="button" (click)="sortById()">Sort by ID</button>
+</div>

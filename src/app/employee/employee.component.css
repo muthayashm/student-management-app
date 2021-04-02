@@ -1,0 +1,29 @@
+.operations {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.operations button {
+  padding: 4px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: 400ms;
+}
+
+.operations button:hover {
+  padding: 4px;
+  margin: 5px;
+  background-color: yellowgreen;
+  transition: 400ms;
+}
+
+.data.clickable {
+  background-color: white;
+  transition: 200ms;
+}
+
+.data.clickable:hover {
+  background-color: lightgray;
+  transition: 200ms;
+}

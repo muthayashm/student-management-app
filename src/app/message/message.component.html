@@ -1,0 +1,9 @@
+<div *ngIf="getMessages()">
+  <h3>Messages</h3>
+
+  <ul *ngFor="let message of getMessages()">
+    <li>{{message}}</li>
+  </ul>
+
+  <button type="reset" (click)="reset()">Reset</button>
+</div>
